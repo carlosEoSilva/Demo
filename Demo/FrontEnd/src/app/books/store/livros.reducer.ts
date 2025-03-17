@@ -18,13 +18,13 @@ export const livrosReducer= createReducer(
     }),
 
     on(act.editarLivroApiSucesso, (state, { livroEditado })=>{
-        let newState= state.filter(x => x.Id !== livroEditado.Id);
+        let newState= state.filter(x => x.id !== livroEditado.id);
         newState.push(livroEditado);
         return newState;
     }),
 
     on(act.apagarLivroApiSucesso, (state, { id })=>{
-        let newState= state.filter(x => x.Id !== id);
+        let newState= state.filter(x => x.id !== id);
         return newState;
     })
 )

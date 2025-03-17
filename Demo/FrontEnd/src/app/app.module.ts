@@ -13,6 +13,7 @@ import { environment } from '../environments/environment';
 // import { appReducer } from './shared/store/app.reducer';
 import { SnackbarComponent } from './shared/snackbar/snackbar.component';
 import { DialogComponent } from './shared/dialog/dialog.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { DialogComponent } from './shared/dialog/dialog.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     RouterModule.forRoot([]),
     StoreModule.forRoot({ }),
     EffectsModule.forRoot([]),

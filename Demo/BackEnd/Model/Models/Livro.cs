@@ -6,7 +6,6 @@
         public string Titulo { get; set; }
         public string Autor { get; set; }
         public string Capa { get; set; }
-        public decimal Preco { get; set; }
-        public DateTime Lançamento { get; set; }
+        public DateTime Lancamento { get; set; }
     }
 }

@@ -9,8 +9,7 @@ import  *  as act from './livros.action';
 export class LivrosEffects{
     constructor(
         private _actions$:Actions,
-        private _servico:LivrosServico,
-        ){ }
+        private _servico:LivrosServico, ){ }
 
     buscarTodosLivros$= createEffect(()=>
      this._actions$.pipe(
@@ -18,7 +17,7 @@ export class LivrosEffects{
         switchMap(()=>{
             return this._servico
                 .buscarLivros()
-                .pipe(map((data:Livro[])=> act.buscarLivrosSucesso({ todosLivros: data})));
+                .pipe(map((data:Livro[])=> { console.log(data); return act.buscarLivrosSucesso({ todosLivros: data}) } ));
         })
      )       
     );

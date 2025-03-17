@@ -39,7 +39,7 @@ export class EditBooksComponent implements OnInit {
     fetchFormData$.subscribe((data)=>{
       if(data){
         this.livroEditar= {...data};
-        this.capaPreview= data.Capa;
+        this.capaPreview= data.capa;
       }
       else{
         this._router.navigate(['/']);
@@ -54,10 +54,10 @@ export class EditBooksComponent implements OnInit {
       return
     }
 
-    this.livroEditar.Autor= form.value.autor;
-    this.livroEditar.Capa= form.value.capa;
-    this.livroEditar.Preco= form.value.preco;
-    this.livroEditar.Titulo= form.value.titulo;
+    this.livroEditar.autor= form.value.autor;
+    this.livroEditar.capa= form.value.capa;
+    this.livroEditar.lancamento= form.value.lancamento;
+    this.livroEditar.titulo= form.value.titulo;
 
     console.log('A-'); console.log(this.livroEditar);
 
@@ -90,7 +90,7 @@ export class EditBooksComponent implements OnInit {
   }
 
   public apagarLivro(){
-    this._store.dispatch(apagarLivroApi({ id: this.livroEditar.Id}));
+    this._store.dispatch(apagarLivroApi({ id: this.livroEditar.id}));
   }
 
   

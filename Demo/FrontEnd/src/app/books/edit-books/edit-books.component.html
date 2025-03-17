@@ -7,7 +7,7 @@
       <mat-label>Title</mat-label>
       <input 
         name="titulo"
-        [(ngModel)]="livroEditar.Titulo"
+        [(ngModel)]="livroEditar.titulo"
         #titulo="ngModel"
         matInput 
         required
@@ -18,7 +18,7 @@
       <mat-label>Author</mat-label>
       <input 
         name="autor"
-        [(ngModel)]="livroEditar.Autor"
+        [(ngModel)]="livroEditar.autor"
         #autor="ngModel"
         required
         matInput 
@@ -29,7 +29,7 @@
       <mat-label>Cover Url</mat-label>
       <input 
         name="capa"
-        [(ngModel)]="livroEditar.Capa"
+        [(ngModel)]="livroEditar.capa"
         #capa="ngModel"
         required
         (focusout)="preview(capa)"
@@ -40,9 +40,9 @@
     <mat-form-field class="form-input" appearance="legacy">
       <mat-label>Price</mat-label>
       <input 
-        name="preco"
-        [(ngModel)]="livroEditar.Preco"
-        #preco="ngModel"
+        name="lancamento"
+        [(ngModel)]="livroEditar.lancamento"
+        #lancamento="ngModel"
         required
         matInput 
         placeholder="">

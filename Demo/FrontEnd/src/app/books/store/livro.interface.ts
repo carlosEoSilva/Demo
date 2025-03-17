@@ -1,7 +1,7 @@
 export interface ILivro{
-    Id:number;
-    Titulo:string;
-    Autor:string;
-    Capa:string;
-    Preco:number;
+    id:number;
+    titulo:string;
+    autor:string;
+    capa:string;
+    lancamento:Date;
 }

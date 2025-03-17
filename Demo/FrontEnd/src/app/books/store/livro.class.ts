@@ -1,23 +1,23 @@
 import { ILivro } from "./livro.interface";
 
 export class Livro implements ILivro{
-    Id:number;
-    Titulo:string;
-    Autor:string;
-    Capa:string;
-    Preco:number;
+    id:number;
+    titulo:string;
+    autor:string;
+    capa:string;
+    lancamento:Date;
 
     constructor(
         id:number= 0, 
         titulo:string= '', 
         autor:string= '', 
         capa:string= '', 
-        preco:number= 0)
+        lancamento:Date= new Date() )
     {
-        this.Id= id;
-        this.Titulo= titulo;
-        this.Autor= autor;
-        this.Capa= capa;
-        this.Preco= preco;
+        this.id= id;
+        this.titulo= titulo;
+        this.autor= autor;
+        this.capa= capa;
+        this.lancamento= lancamento;
     }
 }
